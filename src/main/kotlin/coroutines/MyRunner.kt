@@ -1,17 +1,11 @@
 package coroutines
 
-import edu.uchicago.gerber.code.*
-import main69
-import main70
-import main71
-import main72
-import main73
-import main74
-import main75
-import main76
-import main77
-import main78
+import other.main69
+import other.main70
+import other.main75
+import other.main77
 import mainWithTimeout
+import other.*
 
 fun main(args: Array<String>) {
     if (args.isEmpty()) {
@@ -25,7 +19,6 @@ fun main(args: Array<String>) {
         "main63" -> main63()
         "main64" -> main64()
         "main65" -> main65()
-       // "main66" -> main66()
         "main68" -> main68()
         "main69" -> main69()
         "main70" -> main70()
@@ -41,14 +34,14 @@ fun main(args: Array<String>) {
         "scen02" -> scen02()
         "scen03" -> scen03()
         "scen03b" -> scen03b()
+        "scen03c" -> scen03c()
         "mainWithContext" -> mainWithContext()
         "mainWithTimeout" -> mainWithTimeout()
         "mainYield01" -> mainYield01()
         "mainYield02" -> mainYield02()
         "withTimeoutOrNull" -> withTimeoutOrNull()
         "mainLazy" -> mainLazy()
-        //todo add main methods
-
+        "mainContexts" -> mainContexts()
 
         else -> println("Unknown function: ${args[0]}")
     }

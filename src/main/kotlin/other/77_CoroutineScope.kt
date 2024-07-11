@@ -1,3 +1,5 @@
+package other
+
 import kotlinx.coroutines.*
 
 fun main77() = runBlocking {

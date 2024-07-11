@@ -1,4 +1,4 @@
-
+package other
 import kotlinx.coroutines.*
 
 fun main76() = runBlocking {    // Creates a blocking coroutine that executes in current thread (main)

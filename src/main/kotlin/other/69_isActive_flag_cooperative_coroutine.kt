@@ -1,3 +1,5 @@
+package other
+
 import kotlinx.coroutines.*
 
 fun main69() = runBlocking {    // Creates a blocking coroutine that executes in current thread (edu.uchicago.gerber

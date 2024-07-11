@@ -2,6 +2,8 @@ package coroutines
 
 import kotlinx.coroutines.*
 
+
+//coroutine scheduler, yields to other coroutines that may be waiting.
 fun mainYield01() = runBlocking {
     val job1 = launch {
         repeat(5) { i ->

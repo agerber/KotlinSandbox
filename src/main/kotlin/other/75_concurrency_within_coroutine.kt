@@ -1,3 +1,5 @@
+package other
+
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 

@@ -1,8 +1,11 @@
+package other
+
 import kotlinx.coroutines.*
 
-fun main71() = runBlocking {    // Creates a blocking coroutine that executes in current thread (main)
+fun main70() = runBlocking {    // Creates a blocking coroutine that executes in current thread (edu.uchicago.gerber
+    // .code.main)
 
-    println("Main program starts: ${Thread.currentThread().name}")  // main thread
+    println("Main program starts: ${Thread.currentThread().name}")  // edu.uchicago.gerber.code.main thread
 
     val job: Job = launch(Dispatchers.Default) {     // Thread T1: Creates a non-blocking coroutine
         try {
@@ -13,10 +16,7 @@ fun main71() = runBlocking {    // Creates a blocking coroutine that executes in
         } catch (ex: CancellationException) {
             print("\nException caught safely: ${ex.message}")
         } finally {
-            withContext(NonCancellable) {
-                delay(1000)     // Generally we don't use suspending function in finally
-                print("\nClose resources in finally")
-            }
+            print("\nClose resources in finally")
         }
     }
 
@@ -24,5 +24,5 @@ fun main71() = runBlocking {    // Creates a blocking coroutine that executes in
     job.cancel(CancellationException("My own crash message"))
     job.join()
 
-    println("\nMain program ends: ${Thread.currentThread().name}")    // main thread
+    println("\nMain program ends: ${Thread.currentThread().name}")    // edu.uchicago.gerber.code.main thread
 }
