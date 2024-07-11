@@ -39,6 +39,7 @@ fun main(args: Array<String>) {
         "scen01" -> scen01()
         "scen02" -> scen02()
         "scen03" -> scen03()
+        "scen03b" -> scen03b()
 
         else -> println("Unknown function: ${args[0]}")
     }
