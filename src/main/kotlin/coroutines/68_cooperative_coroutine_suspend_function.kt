@@ -9,11 +9,11 @@ fun main68() = runBlocking {    // Creates a blocking coroutine that executes in
     val job: Job = launch {     // Thread edu.uchicago.gerber.code.main: Creates a non-blocking coroutine
         for (i in 0..500) {
             print("$i.")
-            yield()     // or use delay() or any other suspending function as per your need.
+            yield()     // yeild means check to see if we've been cancelled.
         }
     }
 
-    delay(10)  // Let's print a few values before we cancel
+    delay(5)  // Let's print a few values before we cancel
     job.cancelAndJoin()
 
     println("\nMain program ends: ${Thread.currentThread().name}")    // edu.uchicago.gerber.code.main thread
