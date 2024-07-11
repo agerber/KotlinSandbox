@@ -11,6 +11,7 @@ import main75
 import main76
 import main77
 import main78
+import mainWithTimeout
 
 fun main(args: Array<String>) {
     if (args.isEmpty()) {
@@ -40,6 +41,12 @@ fun main(args: Array<String>) {
         "scen02" -> scen02()
         "scen03" -> scen03()
         "scen03b" -> scen03b()
+        "mainWithContext" -> mainWithContext()
+        "mainWithTimeout" -> mainWithTimeout()
+        "mainYield01" -> mainYield01()
+        "mainYield02" -> mainYield02()
+        //todo add main methods
+
 
         else -> println("Unknown function: ${args[0]}")
     }
