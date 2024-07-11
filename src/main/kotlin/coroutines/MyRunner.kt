@@ -46,6 +46,7 @@ fun main(args: Array<String>) {
         "mainYield01" -> mainYield01()
         "mainYield02" -> mainYield02()
         "withTimeoutOrNull" -> withTimeoutOrNull()
+        "mainLazy" -> mainLazy()
         //todo add main methods
 
 
