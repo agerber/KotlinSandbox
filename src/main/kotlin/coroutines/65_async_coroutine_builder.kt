@@ -5,6 +5,7 @@ import kotlinx.coroutines.*
 fun main65() = runBlocking {    // Creates a blocking coroutine that executes in current thread (edu.uchicago.gerber
     // .code.main)
 
+    println(65)
     println("Main program starts: ${Thread.currentThread().name}")  // edu.uchicago.gerber.code.main thread
 
     val stringDeferred: Deferred<String> = async  { // Thread: edu.uchicago.gerber.code.main

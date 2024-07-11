@@ -2,9 +2,8 @@ package edu.uchicago.gerber.code
 import kotlinx.coroutines.*
 
 
-fun main64() = runBlocking {    // Creates a blocking coroutine that executes in current thread (edu.uchicago.gerber
-    // .code.main)
-
+fun main64() = runBlocking {
+    println(64)
     println("Main program starts: ${Thread.currentThread().name}")  // edu.uchicago.gerber.code.main thread
 
     val job: Job = launch {   // Thread: edu.uchicago.gerber.code.main
